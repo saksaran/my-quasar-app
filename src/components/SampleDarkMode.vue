@@ -1,14 +1,14 @@
 <template>
-  <q-page class="q-pa-md">
-    <div>
+  <q-item class="q-pa-none">
+    <q-item-section side>
       <q-toggle
         v-model="isDark"
         label="Dark Mode"
         color="primary"
         @update:model-value="toggleDarkMode"
       />
-    </div>
-  </q-page>
+    </q-item-section>
+  </q-item>
 </template>
 
 <script setup>

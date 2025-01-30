@@ -8,9 +8,11 @@
   </q-page> -->
   <HelloWorld />
   <DarkMode />
+  <Calculator />
 </template>
 
 <script setup>
-import HelloWorld from 'components/HelloWorld.vue'
-import DarkMode from 'components/DarkMode.vue'
+import HelloWorld from 'src/components/SampleTable.vue'
+import DarkMode from 'src/components/SampleDarkMode.vue'
+import Calculator from 'src/components/SampleCalculator.vue'
 </script>
