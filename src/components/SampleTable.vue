@@ -5,6 +5,12 @@
     </q-card-section>
     <q-card-section>
       <q-btn label="Create" color="green" class="q-mb-md" @click="openCreatePopup" />
+      <q-btn
+        label="Go to User Page"
+        color="primary"
+        class="q-mb-md q-mx-sm"
+        @click="goToUserPage"
+      />
       <div class="col-12">
         <table class="text-bold" cellspacing="0" cellpadding="0" style="width: 100%">
           <thead style="background: slateblue; color: white">
@@ -67,19 +73,20 @@
 <script setup>
 import { ref } from 'vue'
 import { useQuasar } from 'quasar'
+import { useDataStore } from 'stores/dataStore'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const $q = useQuasar()
-
-const dataList = ref([
-  { id: 1, name: 'John Doe', description: 'Description 1', date: '12/31/2022' },
-  { id: 2, name: 'Alex Davie', description: 'Description 2', date: '01/31/2022' },
-  { id: 3, name: 'Javis', description: 'Description 3', date: '02/17/2022' },
-  { id: 4, name: 'Nevermore', description: 'Description 4', date: '01/01/2022' },
-])
-
+const store = useDataStore()
+const dataList = store.dataList
 const popupVisible = ref(false)
 const isEditing = ref(false)
 const formData = ref({ id: null, name: '', description: '', date: '' })
+
+const goToUserPage = () => {
+  router.push('/user')
+}
 
 const openCreatePopup = () => {
   formData.value = { id: null, name: '', description: '', date: '' }
