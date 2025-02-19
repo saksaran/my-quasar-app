@@ -126,6 +126,6 @@ const deleteItem = (id) => {
 
 <style scoped>
 .bg-light {
-  background-color: #f86eb7;
+  background-color: #918bf5;
 }
 </style>
