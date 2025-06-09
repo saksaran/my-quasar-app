@@ -79,7 +79,8 @@ export default defineConfig((/* ctx */) => {
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
     framework: {
       config: {
-        dark: true,
+        dark: false,
+        cssAddon: true,
       },
 
       // iconSet: 'material-icons', // Quasar icon set
@@ -89,7 +90,7 @@ export default defineConfig((/* ctx */) => {
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
       //
-      // components: [],
+      components: [],
       // directives: [],
 
       // Quasar plugins
