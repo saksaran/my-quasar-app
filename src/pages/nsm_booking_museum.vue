@@ -133,17 +133,6 @@ function toggleSelect(index) {
 </script>
 
 <style scoped>
-.page-header {
-  background-color: #051d72;
-}
-
-.custom-logo {
-  width: 250px;
-  height: 250px;
-  border: 2px solid #ccc;
-  border-radius: 54px;
-}
-
 .text-primary-color {
   color: #051d72;
 }

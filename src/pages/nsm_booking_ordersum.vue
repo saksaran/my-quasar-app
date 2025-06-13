@@ -7,7 +7,7 @@
           <span class="text-h4">Order Summary</span>
         </div>
 
-        <div class="ticket-section q-mx-xl q-mt-xl q-mb-lg">
+        <div class="ticket-section q-mt-xl q-mb-lg">
           <q-scroll-area style="height: 100%">
             <div class="row justify-center text-primary-color">
               <q-card v-for="(ticket, index) in tickets" :key="index" class="ticket-card">
@@ -53,9 +53,9 @@
 
         <div class="q-pa-md q-mx-xl text-primary-color">
           <div class="row items-center justify-between">
-            <span class="text-h4 text-bold"
+            <span class="text-size-xl text-bold"
               >รายละเอียดการชำระเงิน
-              <span class="text-weight-regular">(Payment details)</span></span
+              <span class="text-weight-regular text-h4">(Payment details)</span></span
             >
           </div>
 
@@ -70,7 +70,7 @@
               <span>ส่วนลด (Discount)</span>
               <span>-0</span>
             </div>
-            <div class="row justify-between q-px-md q-py-lg q-mx-sm net-price">
+            <div class="row justify-between q-px-lg q-py-lg q-mx-sm q-my-md net-price">
               <span>ราคาสุทธิ (Net Price)</span>
               <span>400 ฿</span>
             </div>
@@ -104,7 +104,7 @@ const tickets = [
   {
     type: 'บัตรเข้ากิจกรรม',
     event: 'Science Walk Rally',
-    name: 'ท่องโลกดาราศาสตร์ (Astronomy Walk)',
+    name: 'ท่องโลกดาราศาสตร์ (สำหรับประถมตอนปลายขึ้นไป)',
     round: '10:00 - 16:00',
   },
   {
@@ -188,6 +188,10 @@ s
   font-size: 30px;
 }
 
+.text-size-xl {
+  font-size: 36px;
+}
+
 .ticket-card {
   width: 100%;
   min-height: 380px;
@@ -204,6 +208,8 @@ s
 }
 
 .ticket-section {
+  margin-left: 50px;
+  margin-right: 50px;
   height: 760px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }

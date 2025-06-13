@@ -38,11 +38,15 @@ const routes = [
   },
   {
     path: '/nsm_booking/order',
-    component: () => import('src/pages/nsm_booking_order.vue'),
+    component: () => import('src/pages/nsm_booking_order2.vue'),
   },
   {
     path: '/nsm_booking/ordersummary',
     component: () => import('src/pages/nsm_booking_ordersum.vue'),
+  },
+  {
+    path: '/nsm_payment',
+    component: () => import('src/pages/nsm_payment.vue'),
   },
   {
     path: '/:catchAll(.*)*',

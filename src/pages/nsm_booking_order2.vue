@@ -10,7 +10,7 @@
           </div>
         </div>
 
-        <div class="ticket-section q-mt-xl q-mb-lg">
+        <div class="ticket-section q-mx-xl q-mt-xl">
           <q-scroll-area style="height: 100%">
             <div class="row justify-center text-primary-color">
               <q-card v-for="(ticket, index) in tickets" :key="index" class="ticket-card">
@@ -55,11 +55,25 @@
           </q-scroll-area>
         </div>
 
-        <div class="q-pa-sm q-mx-xl q-mt-xl text-primary-color">
+        <div class="row items-center q-pa-md q-py-lg q-mx-xl">
+          <div class="row items-center">
+            <span class="text-h4 text-bold text-primary-color"
+              >ส่วนลด <span class="text-weight-regular">(Discount)</span></span
+            >
+            <q-icon name="percent" size="26px" class="percent-icon text-weight-bold q-ml-sm" />
+          </div>
+
+          <div class="col q-mx-md">
+            <input type="text" class="discount-input" placeholder="กรอกรหัสคูปองรับส่วนลด" />
+          </div>
+          <q-btn class="text-bold confirm-btn">ยืนยัน</q-btn>
+        </div>
+
+        <div class="q-pa-md q-mx-xl text-primary-color">
           <div class="row items-center justify-between">
-            <span class="text-size-xl text-bold"
+            <span class="text-h4 text-bold"
               >รายละเอียดการชำระเงิน
-              <span class="text-weight-regular text-h4">(Payment details)</span></span
+              <span class="text-weight-regular">(Payment details)</span></span
             >
           </div>
 
@@ -68,27 +82,27 @@
           <div class="text-h4 text-bold">
             <div class="row justify-between q-pa-md q-mx-lg">
               <span>ยอดรวม (Grand Total)</span>
-              <span>0 ฿</span>
+              <span>400 ฿</span>
             </div>
-            <div class="row justify-between q-px-lg q-py-lg q-mx-sm q-my-md net-price">
+            <div class="row justify-between text-red q-pa-md q-mx-lg">
+              <span>ส่วนลด (Discount)</span>
+              <span>-0</span>
+            </div>
+            <div class="row justify-between q-px-md q-py-lg q-mx-sm net-price">
               <span>ราคาสุทธิ (Net Price)</span>
-              <span>0 ฿</span>
+              <span>400 ฿</span>
             </div>
           </div>
         </div>
 
-        <div class="row items-center justify-between q-pa-xl fixed-bottom bg-white">
+        <div class="row items-center justify-between q-ma-xl">
           <q-btn class="text-blue-8 text-bold items-start back-btn" rounded>
             <q-icon name="chevron_left" size="64px" />
             <span class="q-ml-md">กลับ</span>
           </q-btn>
 
           <q-btn class="text-white text-bold items-end next-btn" rounded
-            ><span class="q-mx-md">ยืนยัน</span
-            ><q-icon
-              name="confirmation_number"
-              size="52px"
-              class="q-mr-lg q-ml-sm ticket-icon-next"
+            ><span class="q-ml-md">ถัดไป</span><q-icon name="chevron_right" size="64px"
           /></q-btn>
         </div>
       </q-page>
@@ -146,6 +160,14 @@ s
   color: white;
 }
 
+.confirm-btn {
+  width: 150px;
+  border-radius: 20px;
+  background-color: #051d72;
+  color: white;
+  font-size: 28px;
+}
+
 .custom-line {
   height: 2px;
   background-color: #0099ff;
@@ -153,6 +175,15 @@ s
 
 .custom-padding {
   padding: 18px;
+}
+
+.discount-input {
+  width: 100%;
+  height: 70px;
+  font-size: 28px;
+  border-radius: 20px;
+  border: 2px solid #051d72;
+  padding: 10px;
 }
 
 .net-price {
@@ -165,10 +196,17 @@ s
 .next-btn {
   font-size: 40px;
   margin-top: 20px;
-  width: 320px;
+  width: 280px;
   height: 100px;
   background-color: #0040d6;
   box-shadow: 0 4px 16px rgba(25, 118, 210, 1);
+}
+
+.percent-icon {
+  color: #051d72;
+  border-radius: 100%;
+  padding: 4px;
+  border: 3px solid #051d72;
 }
 
 .text-primary-color {
@@ -187,12 +225,12 @@ s
   font-size: 26px;
 }
 
-.text-size-lg {
-  font-size: 30px;
+.text-size-sm {
+  font-size: 26px;
 }
 
-.text-size-xl {
-  font-size: 36px;
+.text-size-lg {
+  font-size: 30px;
 }
 
 .ticket-card {
@@ -205,15 +243,8 @@ s
   transform: rotate(135deg);
 }
 
-.ticket-icon-next {
-  color: white;
-  transform: rotate(135deg);
-}
-
 .ticket-section {
-  margin-left: 50px;
-  margin-right: 50px;
-  height: 380px;
+  height: 760px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 </style>

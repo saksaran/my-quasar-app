@@ -398,7 +398,6 @@ const decrement = (index) => {
   box-shadow: 0 4px 12px rgba(25, 118, 210, 1) !important;
 }
 .selected-showtime-card .showtime-card-time {
-  /* Nested CSS corrected for single <style> block */
   color: white;
 }
 .booked-event-card {
