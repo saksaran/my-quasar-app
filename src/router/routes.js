@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/access_limited',
-    component: () => import('src/pages/access_limited.vue'),
+    component: () => import('src/pages/access_limited2.vue'),
   },
   {
     path: '/nsm_booking',
@@ -47,6 +47,14 @@ const routes = [
   {
     path: '/nsm_payment',
     component: () => import('src/pages/nsm_payment.vue'),
+  },
+  {
+    path: '/nsm_payment-completed',
+    component: () => import('src/pages/nsm_payment-completed.vue'),
+  },
+  {
+    path: '/test',
+    component: () => import('src/pages/test-01.vue'),
   },
   {
     path: '/:catchAll(.*)*',

@@ -30,6 +30,14 @@
         <q-dialog v-model="showQrDialog">
           <q-card class="qr-dialog">
             <div class="text-center q-pt-xl">
+              <q-btn
+                icon="close"
+                round
+                @click="showQrDialog = false"
+                size="20px"
+                class="close-button"
+              />
+
               <q-img src="https://cdn.quasar.dev/img/mountains.jpg" class="custom-logo" />
               <div class="text-h4 text-primary-color text-bold q-my-lg">
                 องค์การพิพิธภัณฑ์วิทยาศาสตร์แห่งชาติ
@@ -56,6 +64,14 @@
         <q-dialog v-model="showCardDialog">
           <q-card class="qr-dialog">
             <div class="text-center q-pt-xl">
+              <q-btn
+                icon="close"
+                round
+                @click="showCardDialog = false"
+                size="20px"
+                class="close-button"
+              />
+
               <q-img src="https://cdn.quasar.dev/img/mountains.jpg" class="custom-logo" />
               <div class="text-h4 text-primary-color text-bold q-my-lg">
                 องค์การพิพิธภัณฑ์วิทยาศาสตร์แห่งชาติ
@@ -110,13 +126,23 @@ watch(isAnyDialogOpen, (isShowing) => {
   color: red;
 }
 
+.close-button {
+  position: absolute;
+  top: 3rem;
+  right: 3.3rem;
+  color: white;
+  background-color: #051d72;
+}
+
 .footer-section {
   margin-top: 65px;
+  margin-bottom: 120px;
   padding-top: 35px;
   padding-bottom: 35px;
   background-color: #ddeffb;
   color: #051d72;
 }
+
 .custom-logo {
   width: 175px;
   height: 175px;
@@ -126,9 +152,10 @@ watch(isAnyDialogOpen, (isShowing) => {
   width: 700px;
   height: 700px;
 }
+
 .qr-dialog {
   min-width: 80%;
-  height: 75%;
+  min-height: 70%;
   border-radius: 80px;
   background-color: white;
 }
@@ -144,7 +171,6 @@ watch(isAnyDialogOpen, (isShowing) => {
   border-radius: 15%;
   border: 4px solid #051d72;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
   background-color: white;
 }
 
